@@ -1,0 +1,46 @@
+<body>
+    <form [formGroup]="spaedit" class="center">
+        <h1>Angular Update Form</h1>
+        <mat-form-field floatlabel="auto" appearance="outline" color="warn">
+            <mat-label>First name</mat-label>
+            <input matInput required formControlName="Firstname">
+            <!-- <mat-hint align="end">Plz Required alphabets</mat-hint> -->
+        </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+    
+        <mat-form-field floatlabel="auto" appearance="outline" color="warn">
+            <mat-label>Last name</mat-label>
+            <input matInput required formControlName="Lastname">
+        </mat-form-field><br><br>
+    
+        <mat-form-field floatlabel="auto" appearance="outline" color="warn">
+            <mat-label>Email</mat-label>
+            <input matInput required formControlName="Email">
+        </mat-form-field>&nbsp; &nbsp; &nbsp;
+    
+        <mat-form-field floatlabel="auto" appearance="outline" color="warn">
+            <mat-label>Designation</mat-label>
+            <mat-select required formControlName="desgination">
+                <mat-option>None</mat-option>
+                <mat-option value="angular">Hr</mat-option>
+                <mat-option value="react">Manager</mat-option>
+                <mat-option value="bootstarp">Ceo</mat-option>
+                <mat-option value="vue">Trainee</mat-option>
+            </mat-select>
+        </mat-form-field><br><br>
+    
+        <mat-label>Gender</mat-label><br>
+        <mat-radio-group required  formControlName="gender">
+            <mat-radio-button value="male">Male</mat-radio-button>&nbsp;
+            <mat-radio-button value="female">Female</mat-radio-button>&nbsp;
+        </mat-radio-group><br><br>
+    
+    
+        <div>
+            <button color="accent" mat-flat-button (click)="back()">Back</button>&nbsp; &nbsp; &nbsp;
+            <button color="accent" mat-flat-button type="reset">Reset</button>&nbsp; &nbsp; &nbsp;
+            <button color="accent" mat-flat-button (click)="update()" type="submit">Update</button>
+    
+        </div>
+    </form>
+    </body>

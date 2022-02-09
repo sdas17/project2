@@ -1,0 +1,80 @@
+/* .full-width{
+    width: 100%;
+}
+
+.top-padding{
+    padding-top: 3px;
+}
+
+.margin-left mat-radio-button:not(:first-child){
+    margin-left:10px;
+}
+
+.form-container{
+    margin: 100px;
+}
+.box{
+    width: 50%;
+    border: 1px solid  rgb(145, 138, 138);
+    border-radius: 25px;
+    padding: 0px 20px 20 px 20 px;
+}
+.fcontainer{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 45%;
+    background: rgb(201, 212, 231);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+} */
+/* .fitem{
+    text-align: end;
+} */
+form{
+    padding :auto;
+    text-align: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg,#3426f3, #ff08b5);
+    height: 180vh;
+     overflow:auto;
+    border-radius: 0pt;
+  }
+  .flex-row{
+background-color: rgba(212, 14, 14, 0.144);
+display:block; 
+
+  }
+  .fcontainer{
+     position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 45%;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(184, 6, 6, 0.05);
+  }
+  
+  
+  mat-label{
+      font-weight: bold;
+  }
+  h1{
+    background-color: rgb(78, 78, 206);
+    color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}

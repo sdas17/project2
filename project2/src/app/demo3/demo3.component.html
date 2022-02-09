@@ -1,0 +1,149 @@
+<body>
+
+
+<form [formGroup]="profileForm" class="fcontainer" >
+    <mat-card >
+
+            <h1  fxLayout="column" fxLayoutAlign="space-between center" >Profile Information</h1>
+
+       
+      <mat-card-content>
+        <div class="flex-row">
+          <div class="col-md-6 ">
+            <mat-form-field class="full-width" floatlabel="auto" appearance="outline">
+              <input formControlName="Firstname"   matInput placeholder="First name" maxLength="10">
+           
+            </mat-form-field>
+        
+          </div>
+          <div class="col-md-6">
+            <mat-form-field class="full-width" floatlabel="auto" appearance="outline">
+              <input  formControlName="Lastname" matInput placeholder="Last name" maxLength="10">
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field class="full-width" floatlabel="auto" appearance="outline">
+              <input  formControlName="Email" matInput placeholder="Enter your email id">
+            </mat-form-field>
+          </div>
+          <mat-form-field class="example-full-width" appearance="fill" floatlabel="auto" appearance="outline">
+            <mat-label> mobile Number</mat-label>
+            <input type="text"placeholder="number "
+                   aria-label="Number"
+                   matInput
+                   formControlName="mobienumber"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+           
+            </mat-autocomplete>
+          </mat-form-field >
+        </div> 
+   
+            <div fxLayout="column" fxLayoutAlign="space-between center" class="flex-row"  >
+                <mat-form-field floatlabel="auto" appearance="outline" color="warn"   >
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" required formControlName="password">
+                </mat-form-field>&nbsp; &nbsp;&nbsp;
+
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-between center"  class="flex-row"  >
+          <!-- <mat-hint align="end">plz enter minimum 6 characters</mat-hint> -->
+              <mat-form-field floatlabel="auto" appearance="outline" color="warn" >
+                            <mat-label>conform password</mat-label>
+                       <input matInput type="password" formControlName="cpassword" required>
+                         <!-- <mat-hint align="end">plz enter minimum 6 characters</mat-hint> -->
+                             </mat-form-field><br><br>
+            </div>
+                
+              
+
+       
+
+
+        <div class="flex-row">
+          <div class="col-sm-6">
+            <mat-form-field class="full-width" floatlabel="auto" appearance="outline">
+              <textarea  formControlName="address" matInput placeholder="Address"></textarea>
+            </mat-form-field>
+          </div>
+          <div class="col-md-6 top-padding">
+                <mat-form-field class="full-width" appearance="fill" floatlabel="auto" appearance="outline">
+                    <mat-label>Select DOB</mat-label>
+                    <input  formControlName="dob" matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>                  
+            </div>
+            <div class="col-md-6 top-padding">
+
+            <mat-form-field appearance="fill" floatlabel="auto" appearance="outline">
+                <mat-label  >Desgination</mat-label>
+                <mat-select formControlName="desgination">
+                  <mat-option value="software testing">SOFTWARE TESTING</mat-option>
+                  <mat-option value="JAVA DEVLOPER">JAVA DEVLOPER</mat-option>
+                  <mat-option value="CONTENT WRITTING">CONTENT WRITTING</mat-option>
+                  <mat-option value="PYTHON DEVLOPER">PYTHON DEVLOPER</mat-option>
+                  <mat-option value="DIGITAL MARKETTING">Digital MARKETTING</mat-option>
+                  <mat-option value="unity gaming">UnITY GAMING</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+        </div>
+        <div class="flex-row">
+            <div class="col-md-12">
+                <mat-radio-group  formControlName="gender" class="margin-left">
+                    <mat-radio-button value="male"> Male </mat-radio-button>
+                    <mat-radio-button value="female"> Female </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+      </mat-card-content>
+    
+      <div fxLayout="row" fxLayoutAlign="space-between center"  class="flex-row">
+        <mat-card-actions>
+            <button (click)="saveForm()"mat-raised-button color="primary">Save</button>
+            <!-- <button id="basic"type="button"mat-raised-button color="primary" mat-button (click)="DeltedMethod()"> Delete</button> -->
+             <button id="basic"type="button" mat-raised-button color="primary" mat-button (click)="updateUser() ">Edit</button>
+          </mat-card-actions>
+      </div>
+
+    </mat-card>
+  </form>
+</body>
+
+
+<!-- <div >
+    <table border="2">
+
+    <thead class="bottomleft">
+        <tr>
+            <th>fName</th>
+            <th>lName</th>
+            <th>addresss</th>
+            <th>dob</th>
+            <th>gender</th>
+            <th>Email</th>
+            <th>mobienumber</th>
+            <th>Desgination</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listData">
+            <td><span>{{item.firstName}}</span></td>
+            <td><span>{{item.lastName}}</span></td>
+             <td><span>{{item.address}}</span></td>
+             <td><span>{{item.dob | date}}</span></td>
+             <td><span>{{item.gender}}</span></td>
+             <td><span>{{item.Email}}</span></td>
+             <td><span>{{item.mobienumber}}</span></td>
+             <td><span>{{item.desgination}}</span></td>
+
+ <td><button type="button"  mat-raised-button style="color: blue;"  class="btn btn-primary" (click)="DeltedMethod(item)">DElETE</button></td>
+
+
+        </tr>
+    </tbody>
+</table>
+
+</div> -->
